@@ -13,7 +13,7 @@ const viewUser = (req, res) => {
       username: result.username,
       email: result.email,
       description: result.description,
-      image: `http://localhost:3000/${result.image}`
+      image: `http://verdant-games.herokuapp.com/${result.image}`
     })
   })
 }

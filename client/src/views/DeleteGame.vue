@@ -30,7 +30,7 @@ export default {
   },
   mounted() {
     const id = this.id
-    const url = `http://localhost:3000/api/games/${id}`
+    const url = `http://verdant-games.herokuapp.com/api/games/${id}`
     const vm = this
     fetch(url, {
       mode: 'cors'
@@ -46,7 +46,7 @@ export default {
   methods: {
     deleteGame() {
       const id = this.id
-      const url = `http://localhost:3000/api/games/${id}`
+      const url = `http://verdant-games.herokuapp.com/api/games/${id}`
       fetch(url, {
         method: 'DELETE',
         mode: 'cors'

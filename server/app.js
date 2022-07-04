@@ -14,7 +14,7 @@ const app = express()
 
 const port = 3000
 
-const dbURI = 'mongodb://127.0.0.1:27017/gamedb'
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.zvcowpw.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true})
     .then((result) => app.listen(port))
     .catch((err) => console.log(err))

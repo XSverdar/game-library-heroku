@@ -33,7 +33,7 @@ export default {
   mounted() {
     const token = TokenService.getLocalAccessToken()
     const id = TokenService.getDecoded()._id
-    const url = `http://localhost:3000/api/users/${id}`
+    const url = `http://verdant-games.herokuapp.com/api/users/${id}`
     const vm = this
     fetch(url, {
       headers: {
@@ -54,7 +54,7 @@ export default {
     async deleteAccount() {
       const token = TokenService.getLocalAccessToken()
       const id = TokenService.getDecoded()._id
-      const url = `http://localhost:3000/api/users/${id}`
+      const url = `http://verdant-games.herokuapp.com/api/users/${id}`
       const response = await fetch(url, {
         method: 'DELETE',
         headers: {

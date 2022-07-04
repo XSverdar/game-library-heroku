@@ -69,7 +69,7 @@ export default {
     create() {
       if (this.isValid()){
         console.log('create game')
-        const url = 'http://localhost:3000/api/games' // server
+        const url = 'http://verdant-games.herokuapp.com/api/games' // server
         const formData = new FormData()
         formData.append('title', this.title)
         formData.append('genre', this.genre)

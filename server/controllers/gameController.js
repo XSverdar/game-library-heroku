@@ -12,7 +12,7 @@ const viewGame = (req, res) => {
       genre: result.genre,
       rating: result.rating,
       description: result.description,
-      image: `http://localhost:3000/${result.image}`,
+      image: `http://verdant-games.herokuapp.com/${result.image}`,
       url: result.url
     })
   })
@@ -39,7 +39,7 @@ const deleteGame = (req, res) => {
       genre: result.genre,
       rating: result.rating,
       description: result.description,
-      image: `http://localhost:3000/${result.image}`,
+      image: `http://verdant-games.herokuapp.com/${result.image}`,
       url: result.url
     })
   })

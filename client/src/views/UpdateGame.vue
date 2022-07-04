@@ -67,7 +67,7 @@ export default {
   },
   mounted() {
     const id = this.id
-    const url = `http://localhost:3000/api/games/${id}`
+    const url = `http://verdant-games.herokuapp.com/api/games/${id}`
     const vm = this
     fetch(url, {
       mode: 'cors'
@@ -90,7 +90,7 @@ export default {
       if (this.isValid()){
         console.log('update game')
         const id = this.id
-        const url = `http://localhost:3000/api/games/${id}` // server
+        const url = `http://verdant-games.herokuapp.com/api/games/${id}` // server
         const formData = new FormData()
         formData.append('title', this.title)
         formData.append('genre', this.genre)

@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     const id = this.id
-    const url = `http://localhost:3000/api/games/${id}`
+    const url = `http://verdant-games.herokuapp.com/api/games/${id}`
     const vm = this
     fetch(url, {
       mode: 'cors'
@@ -69,7 +69,7 @@ export default {
     addToLib() {
       const userId = TokenService.getDecoded()._id
       const gameId = this.id
-      const url = `http://localhost:3000/api/users/games/${userId}`
+      const url = `http://verdant-games.herokuapp.com/api/users/games/${userId}`
 
       console.log(JSON.stringify({gameId}))
       

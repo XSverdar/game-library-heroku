@@ -6,7 +6,7 @@
     <input class="search-input" type="text" v-model="search" placeholder="Search...">
     <div class="store-container">
       <router-link v-for="game in filteredgames" :key="game._id" :to="{ name: 'ViewGame', params: { id: game._id }}">
-        <div class="store-element" ><img class="image-game" :src="'http://localhost:3000/' + game.image"><br>{{ game.title }}<br><p class="rating">★ {{ game.rating }}</p></div>
+        <div class="store-element" ><img class="image-game" :src="'http://verdant-games.herokuapp.com/' + game.image"><br>{{ game.title }}<br><p class="rating">★ {{ game.rating }}</p></div>
       </router-link>
       <p class="noresults" v-if="!filteredgames.length">No results found.</p>
     </div>
@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted() {
-    const url = 'http://localhost:3000/api/games/'
+    const url = 'http://verdant-games.herokuapp.com/api/games/'
     const vm = this
 
     fetch(url, {
