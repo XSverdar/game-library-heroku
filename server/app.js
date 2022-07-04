@@ -29,3 +29,15 @@ app.use('/public/images/games', express.static('public/images/games'))
 app.use('/api/auth', authRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/games', gameRoutes)
+
+app.use(express.static(path.join(__dirname, "./dist")))
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, './dist', 'index.html'))
+})
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(__dirname + "/dist/"));
+    app.get("*", (req,res) => {
+        res.sendFile(__dirname + "/dist/index.html");
+    });
+}
